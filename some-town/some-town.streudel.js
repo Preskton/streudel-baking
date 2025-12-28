@@ -8,13 +8,14 @@ stack(
     .set(chords)
     .mode("root:g1")
     .voicing()
-    .s("square"),
+    .s("square")
+    ._spectrum(),
   n("<[1 4 3 6]!3 <[1 3 4 6] [4 3 6 1] [3 4 4 6] [1 4 3 7]>>")
     .set(chords)
     .mode("root:c4")
     .voicing()
     .s("square")
-    .mask("[0 1 0 0 1 1 1 1]/64"),
+    .mask("[0 0 0 0 1 1 1 1]/64"),
   note("<c5 <a4 b4> <b4 e5> d5>*<2 4 3 6>")
     .s("square")
     .mask("[0 0 1 0 0 0 0 0]/64"),
@@ -26,4 +27,4 @@ stack(
     .mode("root:g5")
     .voicing()
     .s("triangle")
-).scope()
+)._pianoroll()
